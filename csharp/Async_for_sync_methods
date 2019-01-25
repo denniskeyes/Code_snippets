@@ -1,0 +1,4 @@
+// For making an asynchronous method call from within a synchronous method
+
+Task<bool> someTask = Task.Run<bool>(async () => await AsyncMethod());
+bool taskResult = someTask.Result;
